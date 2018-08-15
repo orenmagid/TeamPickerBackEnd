@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_203149) do
     t.integer "user_id"
     t.integer "rater_id"
     t.integer "nba_player_id"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_203149) do
   end
 
   create_table "teams", force: :cascade do |t|
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
