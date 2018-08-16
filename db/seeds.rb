@@ -44,8 +44,4 @@ all_nba_players.each do |player|
         person_id: player["personId"],
         pie: nil
         )
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 92f8eb34aa927177d84fe9deb954c921d27a81a8
