@@ -1,15 +1,15 @@
 class Api::V1::GroupsController < ApplicationController
 
-  before_action :find_team, only: [:show]
+  before_action :find_group, only: [:show]
 
   def index
     @groups = Group.all
-    render json: @groups, include: ['comparisons']
+    render json: @groups, include: ['users','comparisons']
 
   end
 
   def show
-    render json: @group, include: ['comparisons']
+    render json: @group, include: ['users','comparisons']
   end
 
   def create
