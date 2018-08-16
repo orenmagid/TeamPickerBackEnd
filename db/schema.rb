@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_203149) do
     t.string "position"
     t.string "height_feet"
     t.string "height_inches"
+    t.integer "pie"
     t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 2018_08_15_203149) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "username"
     t.string "name"
     t.integer "height"
     t.integer "age"
