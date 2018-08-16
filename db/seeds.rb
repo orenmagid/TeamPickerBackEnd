@@ -31,9 +31,3 @@ all_nba_players.each do |player|
         person_id: player["personId"]
         )
 end
-
-
-
-
-
-
