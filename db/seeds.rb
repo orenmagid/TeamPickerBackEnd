@@ -11,6 +11,7 @@ require 'pry'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 uri = URI("http://data.nba.net/10s/prod/v1/2018/players.json")
 http = Net::HTTP.new(uri.host, uri.port)
 req = Net::HTTP::Get.new(uri.path)
@@ -31,8 +32,11 @@ all_nba_players.each do |player|
   #
   # json_data = JSON.parse(resp)
   # pie = json_data["resultSets"][0][rowSet][0][24]
-  # puts pie
-    if (player["yearsPro"] != "0" && player["jersey"] != "" && player["nbaDebutYear"] != "")
+
+if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0")
+
+
+
     NbaPlayer.create(
         first_name: player["firstName"],
         last_name: player["lastName"],
@@ -41,7 +45,21 @@ all_nba_players.each do |player|
         height_feet: player["heightFeet"],
         height_inches: player["heightInches"],
         person_id: player["personId"],
-        pie: [1...20].sample
-    
+        pie: rand(1..20)
+        )
     end
 end
+
+oren = User.create(username: "odog", name: "Oren", height: 72, age: 40)
+anthony = User.create(username: "abuckets", name: "Anthony", height: 70, age: 26)
+jimmy = User.create(username: "jimmy", name: "Jim", height: 54, age: 30)
+john = User.create(username: "john", name: "John", height: 76, age: 36)
+
+group1 = Group.create(name: "Bucket Patrol")
+group2 = Group.create(name: "Kickin' Rocks")
+
+group1.users = [oren, anthony, jimmy, john]
+group2.users = [jimmy, john, oren, anthony]
+
+c1 = Comparison.create(user_id: 1, nba_player_id: 1, rater_id: 2, group_id: 1)
+c2 = Comparison.create(user_id: 2, nba_player_id: 250, rater_id: 1, group_id: 2)
