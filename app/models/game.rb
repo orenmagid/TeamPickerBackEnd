@@ -1,4 +1,4 @@
 class Game < ApplicationRecord
-  belongs_to :team, optional: true
+  has_many :team, through: :game_teams
   belongs_to :user, optional: true
 end
