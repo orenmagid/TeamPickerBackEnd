@@ -56,12 +56,16 @@ oren = User.create(username: "odog", name: "Oren", height: 72, age: 40)
 anthony = User.create(username: "abuckets", name: "Anthony", height: 70, age: 26)
 jimmy = User.create(username: "jimmy", name: "Jim", height: 54, age: 30)
 john = User.create(username: "john", name: "John", height: 76, age: 36)
+will = User.create(username: "willimnot", name: "Will", height: 75, age: 40)
+susanna = User.create(username: "susanna", name: "Susanna", height: 64, age: 27)
+jared = User.create(username: "jhandles", name: "Jared", height: 73, age: 22)
+august = User.create(username: "amoney", name: "August", height: 68, age: 24)
+essa = User.create(username: "essa", name: "Essa", height: 69, age: 23)
+bruno = User.create(username: "bgthaog", name: "Bruno", height: 68, age: 25)
+brittany = User.create(username: "brittany", name: "Brittany", height: 64, age: 24)
 
 group1 = Group.create(name: "Bucket Patrol")
 group2 = Group.create(name: "Kickin' Rocks")
 
-group1.users = [oren, anthony, jimmy, john]
-group2.users = [jimmy, john, oren, anthony]
-
-c1 = Comparison.create(user_id: 1, nba_player_id: 1, rater_id: 2, group_id: 1)
-c2 = Comparison.create(user_id: 2, nba_player_id: 250, rater_id: 1, group_id: 2)
+group1.users = [oren, anthony, jimmy, john, will, susanna, jared, august, essa, bruno, brittany]
+group2.users = [oren, anthony, jimmy, john, will, susanna, jared, august, essa, bruno, brittany]

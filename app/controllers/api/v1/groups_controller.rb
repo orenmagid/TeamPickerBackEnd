@@ -4,12 +4,12 @@ class Api::V1::GroupsController < ApplicationController
 
   def index
     @groups = Group.all
-    render json: @groups, include: ['users','comparisons']
+    render json: @groups, include: ['users']
 
   end
 
   def show
-    render json: @group, include: ['users','comparisons']
+    render json: @group, include: ['users']
   end
 
   def create
