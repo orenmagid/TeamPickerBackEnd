@@ -63,5 +63,5 @@ group2 = Group.create(name: "Kickin' Rocks")
 group1.users = [oren, anthony, jimmy, john]
 group2.users = [jimmy, john, oren, anthony]
 
-c1 = Comparison.create(user_id: 1, nba_player_id: 1, rater_id: 2, group_id: 1)
-c2 = Comparison.create(user_id: 2, nba_player_id: 250, rater_id: 1, group_id: 2)
+# c1 = Comparison.create(user_id: 1, nba_player_id: 1, rater_id: 2, group_id: 1)
+# c2 = Comparison.create(user_id: 2, nba_player_id: 250, rater_id: 1, group_id: 2)
