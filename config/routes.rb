@@ -5,6 +5,10 @@ Rails.application.routes.draw do
       resources :teams
       resources :groups
       resources :nba_players
+      resources :comparisons
+      get 'comparisons/group/:id', to: 'comparisons#filtered_index'
+      
+      
     end
   end
 end

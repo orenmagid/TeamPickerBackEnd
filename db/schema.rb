@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_191312) do
     t.integer "rater_id"
     t.integer "nba_player_id"
     t.integer "group_id"
+    t.integer "pie"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,7 +36,6 @@ ActiveRecord::Schema.define(version: 2018_08_16_191312) do
     t.datetime "date"
     t.string "location"
     t.integer "user_id"
-    t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
