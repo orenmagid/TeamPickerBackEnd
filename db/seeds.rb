@@ -42,7 +42,7 @@ if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"]
         person_id: player["personId"],
         offrtg: nil,
         dfrtg: nil,
-        pie: "#{pie}",
+        pie: nil,
         usg: nil
         )
     end
