@@ -28,7 +28,7 @@ class Api::V1::ComparisonsController < ApplicationController
     private
 
     def comparison_params
-      params.require(:comparison).permit(:id, :user_id, :rater_id, :group_id, :nba_player_id, :pie, :offrtg, :dfrtg, :usg)
+      params.require(:comparison).permit(:id, :user_id, :rater_id, :group_id, :nba_player_id, :pie, :dfrtg, :usg, :offrtg)
 
     end
 
