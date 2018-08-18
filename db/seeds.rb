@@ -38,7 +38,7 @@ all_nba_players.each do |player|
   dfrtg = json_data["resultSets"][0][rowSet][0][12]
   usg = json_data["resultSets"][0][rowSet][0][22]
 
-if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" player.personId != 201951 && player.personId != 202688 && player.personId != 201951)
+if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" && player.personId != 201951 && player.personId != 202688 && player.personId != 201951)
 
 
 
