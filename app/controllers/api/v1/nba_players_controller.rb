@@ -15,7 +15,7 @@ before_action :find_player, only: [:show, :update]
 
 
 
-   @nba_players = NbaPlayer.all.select { |player| player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201582}.sample(20)
+   @nba_players = NbaPlayer.all.select { |player| player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201582}.sample(20) }
    render json: @nba_players
  end
 
