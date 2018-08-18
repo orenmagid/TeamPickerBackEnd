@@ -33,7 +33,10 @@ all_nba_players.each do |player|
   puts resp
 
   json_data = JSON.parse(resp)
-  pie = json_data["resultSets"][0][rowSet][0][24]
+  pie = json_data["resultSets"][0]["rowSet"][0][24]
+  offrtg = json_data["resultSets"][0][rowSet][0][11]
+  dfrtg = json_data["resultSets"][0][rowSet][0][12]
+  usg = json_data["resultSets"][0][rowSet][0][22]
 
 if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" player.personId != 201951 && player.personId != 202688 && player.personId != 201951)
 
@@ -47,10 +50,10 @@ if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"]
         height_feet: player["heightFeet"],
         height_inches: player["heightInches"],
         person_id: player["personId"],
-        offrtg: nil,
-        dfrtg: nil,
+        offrtg: "#{offrtg}",
+        dfrtg: "#{dfrtg}",
         pie: "#{pie}",
-        usg: nil
+        usg: "#{usg}"
         )
     end
 end
