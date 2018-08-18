@@ -3,17 +3,17 @@ class Api::V1::NbaPlayersController < ApplicationController
 before_action :find_player, only: [:show, :update]
 
  def index
-   # @nba_players_top = NbaPlayer.all.select { |player| player.pie >= 15 }.sample(2)
-   # @nba_players_mid = NbaPlayer.all.select { |player| player.pie > 10 && player.pie < 15}.sample(2)
-   # @nba_players_rest = NbaPlayer.all.select { |player| player.pie <= 10 }.sample(1)
+   @nba_players_top = NbaPlayer.all.select { |player| player.pie >= 15 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}.sample(2)
+   @nba_players_mid = NbaPlayer.all.select { |player| player.pie > 10 && player.pie < 15 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}.sample(2)
+   @nba_players_rest = NbaPlayer.all.select { |player| player.pie <= 10 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}.sample(1)
 
-   # @nba_players = @nba_players_top + @nba_players_mid + @nba_players_rest
+   @nba_players = @nba_players_top + @nba_players_mid + @nba_players_rest
 
-   # @nba_players = NbaPlayer.all.sample(20)
 
-   # alex ajinca, ty lawson
 
-   @nba_players = NbaPlayer.all.select { |player| player.usg == "undefined" && player.last_name != "Knight"}.sample(3)
+
+
+   # @nba_players = NbaPlayer.all.select { |player| player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}
    render json: @nba_players
  end
 
