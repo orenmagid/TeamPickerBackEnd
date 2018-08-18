@@ -20,10 +20,7 @@ ActiveRecord::Schema.define(version: 2018_08_17_173446) do
     t.integer "rater_id"
     t.integer "nba_player_id"
     t.integer "group_id"
-    t.integer "offrtg"
-    t.integer "dfrtg"
     t.integer "pie"
-    t.integer "usg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -56,10 +53,10 @@ ActiveRecord::Schema.define(version: 2018_08_17_173446) do
     t.string "position"
     t.string "height_feet"
     t.string "height_inches"
-    t.integer "offrtg"
-    t.integer "dfrtg"
-    t.integer "pie"
-    t.integer "usg"
+    t.string "offrtg"
+    t.string "dfrtg"
+    t.string "pie"
+    t.string "usg"
     t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

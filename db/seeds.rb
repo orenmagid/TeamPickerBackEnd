@@ -24,19 +24,18 @@ all_nba_players = json_data["league"]["standard"]
 
 all_nba_players.each do |player|
 
-  pie = rand(1..20)
 
 
-  # uri = URI("http://stats.nba.com/stats/playerdashboardbyyearoveryear/?measureType=Advanced&perMode=PerGame&plusMinus=N&paceAdjust=N&rank=N&leagueId=00&season=2017-18&seasonType=Regular+Season&playerId=#{player["personId"]}&outcome=&location=&month=0&seasonSegment=&dateFrom=&dateTo=&opponentTeamId=0&vsConference=&vsDivision=&gameSegment=&period=0&shotClockRange=&lastNGames=0")
-  # http = Net::HTTP.new(uri.host, uri.port)
-  # req = Net::HTTP::Get.new(uri.path)
-  # resp = http.request(req)
-  # puts resp
-  #
-  # json_data = JSON.parse(resp)
-  # pie = json_data["resultSets"][0][rowSet][0][24]
+  uri = URI("http://stats.nba.com/stats/playerdashboardbyyearoveryear/?measureType=Advanced&perMode=PerGame&plusMinus=N&paceAdjust=N&rank=N&leagueId=00&season=2017-18&seasonType=Regular+Season&playerId=#{player["personId"]}&outcome=&location=&month=0&seasonSegment=&dateFrom=&dateTo=&opponentTeamId=0&vsConference=&vsDivision=&gameSegment=&period=0&shotClockRange=&lastNGames=0")
+  http = Net::HTTP.new(uri.host, uri.port)
+  req = Net::HTTP::Get.new(uri.path)
+  resp = http.request(req)
+  puts resp
 
-if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1")
+  json_data = JSON.parse(resp)
+  pie = json_data["resultSets"][0][rowSet][0][24]
+
+if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" player.personId != 201951 && player.personId != 202688 && player.personId != 201951)
 
 
 
@@ -50,7 +49,7 @@ if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"]
         person_id: player["personId"],
         offrtg: nil,
         dfrtg: nil,
-        pie: pie,
+        pie: "#{pie}",
         usg: nil
         )
     end
