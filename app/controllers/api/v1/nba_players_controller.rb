@@ -4,8 +4,8 @@ before_action :find_player, only: [:show, :update]
 
  def index
    @nba_players_top = NbaPlayer.all.select { |player| player.pie.to_f >= 0.15 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201582}.sample(2)
-   @nba_players_mid = NbaPlayer.all.select { |player| player.pie.to_f > 0.10 && player.pie.to_f < 0.15 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}.sample(2)
-   @nba_players_rest = NbaPlayer.all.select { |player| player.pie.to_f <= 0.1 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201582}.sample(1)
+   @nba_players_mid = NbaPlayer.all.select { |player| player.pie.to_f > 0.10 && player.pie.to_f < 0.15 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201951}.sample(1)
+   @nba_players_rest = NbaPlayer.all.select { |player| player.pie.to_f <= 0.1 && player.person_id != 201951 && player.person_id != 202688 && player.person_id != 201582}.sample(2)
 
 
 
