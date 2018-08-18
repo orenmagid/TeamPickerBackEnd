@@ -7,7 +7,10 @@ class CreateNbaPlayers < ActiveRecord::Migration[5.2]
       t.string :position
       t.string :height_feet
       t.string :height_inches
+      t.integer :offrtg
+      t.integer :dfrtg
       t.integer :pie
+      t.integer :usg
       t.integer :team_id
 
       t.timestamps

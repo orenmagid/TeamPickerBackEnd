@@ -34,7 +34,7 @@ end
  end
 
  def nba_player_params
-  params.permit(:id, :pie)
+  params.permit(:id, :offrtg, :dfrtg, :pie, :usg)
 
 end
 

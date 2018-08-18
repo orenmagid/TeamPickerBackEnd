@@ -1,4 +1,5 @@
 require 'net/http'
+
 require 'json'
 require 'pry'
 
@@ -47,10 +48,15 @@ if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"]
         height_feet: player["heightFeet"],
         height_inches: player["heightInches"],
         person_id: player["personId"],
-        pie: pie
+        offrtg: nil,
+        dfrtg: nil,
+        pie: pie,
+        usg: nil
         )
     end
 end
+
+
 
 oren = User.create(username: "odog", name: "Oren", height: 72, age: 40)
 anthony = User.create(username: "abuckets", name: "Anthony", height: 70, age: 26)
