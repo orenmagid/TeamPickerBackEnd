@@ -5,7 +5,10 @@ class CreateComparisons < ActiveRecord::Migration[5.2]
       t.integer :rater_id
       t.integer :nba_player_id
       t.integer :group_id
-      t.integer :pie
+      t.string :offrtg
+      t.string :dfrtg
+      t.string :pie
+      t.string :usg
 
       t.timestamps
     end
