@@ -28,7 +28,7 @@ all_nba_players.each do |player|
 
 
 
-if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" && player.personId != 201951 && player.personId != 202688 && player.personId != 201951)
+if (player["nbaDebutYear"] != "" && player["jersey"] != "" && player["yearsPro"] != "0" && player["yearsPro"] != "1" && player["personId"] != 201951 && player["personId"] != 202688 && player["personId"] != 201951)
 
 
 
