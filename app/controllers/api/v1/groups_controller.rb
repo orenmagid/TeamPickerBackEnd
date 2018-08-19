@@ -15,8 +15,9 @@ class Api::V1::GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     @user = User.find(params[:user_id])
-    @group.users << @user
+
     if @group.save
+      @group.users << @user
       render json: @group, status: :accepted
     else
       render json: { errors: @group.errors.full_messages }, status: :unprocessible_entity
@@ -26,7 +27,7 @@ class Api::V1::GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name, :id, :user_id)
+    params.require(:group).permit(:name, :id)
 
   end
 
