@@ -1,6 +1,6 @@
 class Api::V1::GroupsController < ApplicationController
 
-  before_action :find_group, only: [:show]
+  before_action :find_group, only: [:show, :update]
 
   def index
     @groups = Group.all
@@ -18,6 +18,17 @@ class Api::V1::GroupsController < ApplicationController
 
     if @group.save
       @group.users << @user
+      render json: @group, status: :accepted
+    else
+      render json: { errors: @group.errors.full_messages }, status: :unprocessible_entity
+    end
+  end
+
+  def update
+    @user = User.find(params[:user_id])
+    @group.users << @user
+
+    if @group.save
       render json: @group, status: :accepted
     else
       render json: { errors: @group.errors.full_messages }, status: :unprocessible_entity
