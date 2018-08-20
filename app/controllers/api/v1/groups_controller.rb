@@ -25,8 +25,12 @@ class Api::V1::GroupsController < ApplicationController
   end
 
   def update
+    if params[:user_id]
+        @user = User.find(params[:user_id])
+    elsif params[:username]
+      @user = User.find_by(username: params[:username])
+    end
 
-    @user = User.find(params[:user_id])
 
     if params[:name] == @group.name
       @group.users << @user
