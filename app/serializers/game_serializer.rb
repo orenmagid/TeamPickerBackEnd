@@ -1,5 +1,6 @@
 class GameSerializer < ActiveModel::Serializer
   belongs_to :user
-  belongs_to :team
+  has_many :game_teams
+  has_many :teams, through: :game_teams
   attributes :id, :date, :location, :user_id
 end
