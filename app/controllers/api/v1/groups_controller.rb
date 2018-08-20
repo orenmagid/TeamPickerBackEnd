@@ -30,12 +30,7 @@ class Api::V1::GroupsController < ApplicationController
 
     if params[:groupname] == @group.name
       @group.users << @user
-    else
-      render json: { errors: @group.errors.full_messages }, status: :unprocessible_entity
-    end
-
-
-    if @group.save
+      @group.save 
       render json: @group, status: :accepted
     else
       render json: { errors: @group.errors.full_messages }, status: :unprocessible_entity
