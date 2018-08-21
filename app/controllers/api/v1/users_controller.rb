@@ -1,15 +1,15 @@
 class Api::V1::UsersController < ApplicationController
 
-  before_action :find_user, only: [:show]
+  before_action :find_user, only: [:show, :update]
 
   def index
     @users = User.all
-    render json: @users, include: ['games', 'comparisons', 'groups']
+    render json: @users, include: ['games', 'comparisons', 'groups', 'user_groups']
 
   end
 
   def show
-    render json: @user, include: ['games', 'comparisons', 'groups']
+    render json: @user, include: ['games', 'comparisons', 'groups', 'user_groups']
   end
 
   def create
@@ -19,6 +19,11 @@ class Api::V1::UsersController < ApplicationController
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessible_entity
     end
+  end
+
+  def update
+
+
   end
 
   private
