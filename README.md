@@ -19,7 +19,9 @@ Notice that each NBA player has a PIE. PIE stands for Player Impact Estimate, wh
 
 You'd rate everyone, including yourself, in your group, and they'd do the same. After these ratings, everyone would have an average PIE of the NBA players they were compared to, and it's this average PIE or comparisons that would then be used to divide up teams. For each game, you'd indicate which group members are actually present. Then you'd generate teams. If an odd number of players wants in, one is randomly chosen to sit out. Then the remaining players are split up: the highest-rated player on Team A, second-highest on Team B; the third-highest on Team A, fourth-highest on Team B; etc. Then the final two players are switched, so that the highest- and lowest-rated players are on the same team.  
 
+Is this really a fair way to split up teams? I have no idea. It seems like a start though.
 
+Might this lead to hurt feelings, or even fights? It's possible. But does being compared to Udonis Haslem really sting more than being picked last, or not at all? There's at least also the potential for more fun with this process.
 
 
 ## Demo
