@@ -4,7 +4,12 @@ This is the repository for the backend of a project <a href="https://github.com/
 
 The frontend repository is available <a href="https://github.com/orenmagid/team_splitter_frontend">here</a>.
 
-Team Splitter is an app designed to help groups of pickup basketball players choose teams fairly, and have fun in the process. Basically, if you play basketball with a group regularly, you'd all create accounts and rate each other, and these ratings would be used to divide players into teams. You'd rate each other by comparing each other to NBA basketball players.
+Team Splitter is an app designed to help groups of pickup basketball players choose teams fairly, and have fun in the process.
+
+
+## How it Works
+
+Basically, if you play basketball with a group regularly, you'd all create accounts and rate each other, and these ratings would be used to divide players into teams. You'd rate each other by comparing each other to NBA basketball players.
 
 Let's say your group's name is "Bucket Patrol" and John is a regular. When you rate John, you'll be asked, "In the context of Bucket Patrol, which player is John most similar to?" and presented with something like the following:
 
