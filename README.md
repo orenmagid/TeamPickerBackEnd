@@ -8,7 +8,7 @@ Team Splitter is an app designed to help groups of pickup basketball players cho
 
 Let's say your group's name is "Bucket Patrol" and John is a regular. When you rate John, you'll be asked, "In the context of Bucket Patrol, which player is John most similar to?" and presented with the following:
 
-<img src="
+<img src="https://github.com/orenmagid/team_splitter_backend/blob/master/ScreenShot.1.png">
 
 
 ## Demo
